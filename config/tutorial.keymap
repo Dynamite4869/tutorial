@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/hid_usage.h>
+#include <dt-bindings/zmk/hid_usage_pages.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp Q   &kp W   &kp E   &kp R
+                &kp A   &kp S   &kp D   &kp F
+                &kp Z   &kp X   &kp C   &kp V
+                &kp N1  &kp N2  &kp N3  &kp N4
+                &mo 1   &kp N6  &kp N7  &kp N8
+            >;
+        };
+
+        bluetooth_layer {
+            bindings = <
+                &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+                &trans      &trans        &trans        &trans
+                &trans      &trans        &trans        &trans
+                &trans      &trans        &trans        &trans
+                &trans      &trans        &trans        &trans
+            >;
+        };
+    };
+};

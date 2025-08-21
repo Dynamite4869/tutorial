@@ -1,0 +1,3 @@
+config SHIELD_TUTORIAL
+    def_bool y
+    depends on SHIELD_HAS_MATRIX_ROWS
